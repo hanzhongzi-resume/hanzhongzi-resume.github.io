@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章瀚中的简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section:hover {
+            background-color: #e8f0fe;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        .skill-bar {
+            background-color: #e0e0e0;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .skill-level {
+            height: 100%;
+            border-radius: 10px;
+            background-color: #3498db;
+            transition: width 0.5s ease-in-out;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            margin-bottom: 10px;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+        }
+        .left-column {
+            width: 25%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 75%;
+        }
+        .qr-code-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .qr-code-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .qr-code-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #ccc;
+        }
+        #personal-info {
+            background-color: #d4edda;
+        }
+        #skills {
+            background-color: #cce5ff;
+        }
+        #background-and-skills {
+            background-color: #fff3cd;
+        }
+        #work-experience-1, #work-experience-2 {
+            background-color: #e9ecef;
+        }
+        #education {
+            background-color: #ffeeba;
+        }
+        .timeline-container {
+            position: absolute;
+            left: 25%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            overflow: hidden;
+        }
+        .timeline {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #3498db;
+        }
+        .timeline-marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: top 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>章瀚中的简历</h1>
+    
+    <div class="section" id="personal-info">
+        <h2>个人信息</h2>
+        <div class="contact-info">
+            <div class="contact-item">年龄：26岁</div>
+            <div class="contact-item">性别：男</div>
+            <div class="contact-item">政治面貌：中共党员</div>
+            <div class="contact-item">工作年限：5年经验</div>
+            <div class="contact-item">电话：17604884629</div>
+            <div class="contact-item">邮箱：hanzhongiscoolboy@163.com</div>
+            <div class="contact-item">英语级别：大学四级</div>
+            <div class="contact-item">GitHub：<a href="https://github.com/hanzhongzi" target="_blank">https://github.com/hanzhongzi</a></div>
+            <div class="contact-item">个人博客：<a href="https://hanzhongzi.github.io/" target="_blank">https://hanzhongzi.github.io/</a></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-column">
+            <div class="section" id="skills">
+                <h2>技能特长</h2>
+                <ul>
+                    <li>熟悉Linux操作系统的运维操作命令、管理及常见服务配置。</li>
+                    <li>熟悉MySQL、PostgreSQL等关系型数据库，能快速实现对数据库的自动备份、主从配置。</li>
+                    <li>熟悉ElasticSearch、MQ、ELK日志可视化分析、Redis等多种中间件调优和属性配置。</li>
+                    <li>熟悉k8s和docker的日常使用以及调优工作，能够结合业务系统进行响应的容器化落地和编排。</li>
+                    <li>熟悉自动化发布过程，并能熟练使用Jenkins工具实现自动化发布。</li>
+                    <li>可以使用Ansible、saltstack等自动化工具进行日常运维。</li>
+                    <li>具备前后端集于一身的开发能力、可以将日常工作自动化、平台化。</li>
+                </ul>
+                
+                <h3>技能评估</h3>
+                <div class="skill-item">
+                    <div>MySQL：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>Redis：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>PostgreSQL：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>ElasticSearch：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>开发：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>OceanBase：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div>TiDB：</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+                </div>
+            </div>
+            <div class="qr-code-section">
+                <div class="qr-code-title">加我好友建立联系</div>
+                <div class="qr-code-placeholder">
+                    微信二维码预留位置
+                </div>
+            </div>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-marker"></div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="section" id="background-and-skills">
+                <h2>从业背景</h2>
+                <p>近五年云计算服务及新能源头部企业数据库运维工作经验，精通各种类数据库日常的部署、升级、扩容、缩容、告警处理、故障解决、容灾演练、开发培训等操作，并具备运维体系建设、SOP等技术文档输出经验。</p>
+
+                <h2>专业技能</h2>
+                <ul>
+                    <li>熟悉Linux操作系统的运维操作命令及常见服务配置；</li>
+                    <li>熟悉MySQL、PostgreSQL等关系型数据库；</li>
+                    <li>熟悉ElasticSearch、ELK日志可视化分析、Redis、MQ等多种中间件调优和属性配置；</li>
+                    <li>熟悉k8s和docker的日常使用以及调优工作，能够结合业务系统进行容器化落地和编排；</li>
+                    <li>熟练使用Ansible、SaltStack等自动化工具进行日常运维。</li>
+                </ul>
+
+                <h2>数据库优化</h2>
+                <p>依据业务需求优化数据库的逻辑设计和物理设计，分析数据库性能瓶颈，提出并实施优化方案；设计并实施高可靠方案，提高数据库的可用性和稳定性；任职期间完成多项数据库性能优化案例，大幅提升各系统效率。</p>
+
+                <h2>技术应用</h2>
+                <p>关注数据库最新技术动态，研究新技术在现有系统中的应用，引入并实施新技术，提升系统的整体性能和安全性，熟练掌握Shell、Python，可将日常工作自动化、具备使用Golang、Vue等前后端开发语言将日常工作自动化、平台化的能力。</p>
+
+                <h2>沟通协调</h2>
+                <p>与开发团队、业务部门等紧密合作，确保数据库系统满足业务需求；具备良好的沟通能力和团队合作能力，协调解决跨部门问题；多次横向拉通多个部门，合理制定团队目标，提前完成项目目标，节省大量人工成本。</p>
+            </div>
+
+            <div class="section" id="work-experience-1">
+                <h2>工作经历</h2>
+                <h3>理想汽车私有云-运维工程师-数据服务与存储</h3>
+                <p>2021-12 ~ 至今</p>
+                <ul>
+                    <li>工作职责：处理阿里云、百度云、私有云各Linux服务器运维工作，负责核心流程系统、人力系统、财务系统、工厂一体机、工厂内部核心的数据库日常运维及系统异常处理工作，保障服务处于高可用的水平。</li>
+                    <li>体系建设：协助部门负责人进行运维体系、流程、操作标准化建设；任职期间，输出MySQL、PostgreSQL、Redis、RocketMQ、ElasticSearch、EMXQ部署文档、部署标准及日常操作文档。</li>
+                    <li>代码审查：对接近百开发工程师，并利用Yearning做SQL代码审查确保数据库安全、维护公司内部核心服务的云RDS数据库。</li>
+                    <li>数据库性能优化：通过对数据库索引和查询语句优化，保证理想3万员工上下班考勤业务正常，打卡机响应1-2s，提升到100-200ms。</li>
+                    <li>安全风险管理：通过制定财务数据库安全策略，实现财务数据库和服务器的权限控制，提高数据安全性；制定公司核心堡垒机的异地容灾方案，通过自己探索开源软件cloudcanal实现异地双写，低成本完成方案实施。</li>
+                    <li>项目管理：作为数据库负责人主导智能工程项目，拉通各部门（业务开发、设备维护、供应链商、智能商业开发部）进行有效协作并合理安排计划，理清各部门权责，提前7天完成项目交付，为公司节省几十人天人工成本。</li>
+                    <li>工作业绩：独自负责近千套企业系统和各工厂生产数据库，包括： MySQL、PostgreSQL、Redis、RocketMQ、ElasticSearch、EMXQ等组件的运维支持工作，由于工作表现优异，被评为2023年优秀员工。</li>
+                </ul>
+            </div>
+
+            <div class="section" id="work-experience-2">
+                <h2>工作经历</h2>
+                <h3>北京首都在线科技股份有限公司应用运维</h3>
+                <p>2019-10 ~ 2021-12</p>
+                <ul>
+                    <li>工作职责：独自负责公司近80套内部核心数据库及近百套PAAS产品数据库运维，负责公司对外PAAS业务中MySQL、 Redis的运维服务支持。</li>
+                    <li>日常运维：确保数据库高可用、备份和恢复数据，包含各种类数据库日常的部署、升级、扩容、缩容、告警处理、故障解决、容灾演练、开发培训等操作。</li>
+                    <li>数据库优化：依据业务需求优化数据库的逻辑设计和物理设计；针对开发系统类型，负责数据库选型及结构设计；对单节点数据库进行高可用扩展，提供服务的可用性。针对数据库慢查询进行性能优化，通过对索引和语句优化，提升数据库底层查询效率，从之前3小时提升至10分钟；处理业务中出现的长事务，减少锁等待和资源的占用情况，提高业务并发量，提高5倍处理效率。和负责高可用架构的输出（mysql: Galera cluster、MHA ;PostgreSQL: Pgpool集群; Elasticsearch集群）和实施，确保任职期间未出现任何核心数据库长时间无法访问情况</li>
+                    <li>运维自动化：根据日常操作SOP，开发自动化脚本供一线使用，使得一线日常工作人工部分从20多分钟操作提升为3分钟。</li>
+                    <li>数据安全：对开发过程及生产环境，进行及时的数据库回滚，确保数据安全；利用Yearning工具进行SQL代码审查，显著提升数据库安全性，防止潜在的数据泄露或破坏，为一线运维进行程序开发。</li>
+                    <li>文档撰写：针对数据库类问题，完善SOP文档；《数据库主从恢复SOP》、《数据库主从切换SOP》、《Linux性能排查SOP》等。</li>
+                    <li>项目管理：承担公司裸金属项目，主要负责数据库架构的规划与实施；与项目开发人员沟通，确保功能实现，通过重新设计，避免原单节点设计造成的风险。</li>
+                    <li>工作业绩：以实习生身份加入公司，短时间内晋升为公司首席DBA，通过实施高效数据库管理策略，保证高可用性，确保业务连续性，成功实现无重大中断的服务记录。</li>
+                </ul>
+            </div>
+
+            <div class="section" id="education">
+                <h2>教育背景</h2>
+                <h3>内蒙古农业大学(统招)物联网工程</h3>
+                <p>2016-09 ~ 2020-07</p>
+                <ul>
+                    <li>2020年5月校级优秀毕业生</li>
+                    <li>2019年11月全国数学建模大赛自治区级三等奖得主</li>
+                    <li>2019年11月国家励志奖学金</li>
+                    <li>2019年4月校级程序设计大赛二等奖得主</li>
+                    <li>2019年3月校级优秀学生干部单项奖金得主</li>
+                    <li>Red Hat Certified System Administrator</li>
+                    <li>2018年12月获校级优秀学生奖学金</li>
+                    <li>2018年10月获一等国家助学金</li>
+                    <li>2018年5月获校级优秀学生奖学金</li>
+                    <li>2017年11月获校级优秀学生奖学金</li>
+                    <li>2017年10月获一等国家助学金</li>
+                    <li>2017年5月获校级优秀学生奖学金</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const sections = document.querySelectorAll('.section');
+            const timeline = document.querySelector('.timeline');
+            const timelineMarker = document.querySelector('.timeline-marker');
+            const mainContent = document.querySelector('.main-content');
+
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', () => {
+                    sections.forEach(s => {
+                        if (s !== section) {
+                            s.style.opacity = '0.5';
+                            s.style.filter = 'blur(2px)';
+                        }
+                    });
+                    section.style.opacity = '1';
+                    section.style.filter = 'none';
+                    section.style.transform = 'scale(1.05)';
+                });
+                section.addEventListener('mouseleave', () => {
+                    sections.forEach(s => {
+                        s.style.opacity = '1';
+                        s.style.filter = 'none';
+                        s.style.transform = 'scale(1)';
+                    });
+                });
+            });
+
+            const skillLevels = document.querySelectorAll('.skill-level');
+            skillLevels.forEach(skill => {
+                const width = skill.style.width;
+                skill.style.width = '0%';
+                setTimeout(() => {
+                    skill.style.width = width;
+                }, 300);
+            });
+
+            mainContent.addEventListener('mousemove', (e) => {
+                const rect = mainContent.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                const height = rect.height;
+                const percentage = Math.min(Math.max((y / height) * 100, 0), 100);
+                timelineMarker.style.top = `${percentage}%`;
+            });
+        });
+    </script>
+</body>
+</html>
+
