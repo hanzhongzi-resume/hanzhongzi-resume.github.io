@@ -165,6 +165,37 @@
 .badge {
     animation: blink 1s infinite;
 }
+@media (max-width: 768px) {
+    /* 将主内容的布局改为垂直排列 */
+    .main-content {
+        flex-direction: column;
+    }
+
+    /* 设置左、右列的宽度为 100% */
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding-right: 0; /* 移除 padding 确保内容紧凑 */
+    }
+
+    /* 隐藏时间线容器，避免占据空间 */
+    .timeline-container {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .section {
+        padding: 10px;
+    }
+}
     </style>
 </head>
 <body>
