@@ -128,6 +128,43 @@
         width: auto;
         height: auto;
         }
+        /* 基本样式 */
+.badge {
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* 各级别的颜色 */
+.school-level {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.province-level {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.national-level {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* 闪烁效果 */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.badge {
+    animation: blink 1s infinite;
+}
     </style>
 </head>
 <body>
@@ -265,9 +302,9 @@
                 <h3>内蒙古农业大学(统招)计算机-物联网工程</h3>
                 <p>2016-09 ~ 2020-07</p>
                 <ul>
-                    <li>2020年5月校级优秀毕业生</li>
-                    <li>2019年11月全国数学建模大赛自治区级三等奖得主</li>
-                    <li>2019年11月国家励志奖学金</li>
+                    <li><strong>2020年5月校级优秀毕业生</strong> <span class="badge school-level">校级</span></li>
+                    <li><strong>2019年11月全国数学建模大赛自治区级三等奖得主</strong> <span class="badge province-level">省级</span></li>
+                    <li><strong>2019年11月国家励志奖学金</strong> <span class="badge national-level">国家级</span></li>
                     <li>2019年4月校级程序设计大赛二等奖得主</li>
                     <li>2019年3月校级优秀学生干部单项奖金得主</li>
                     <li>Red Hat Certified System Administrator</li>
