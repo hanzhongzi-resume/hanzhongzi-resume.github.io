@@ -207,7 +207,7 @@
             <div class="contact-item">年龄：<span id="age"></span>岁</div>
             <div class="contact-item">性别：男</div>
             <div class="contact-item">政治面貌：中共党员</div>
-            <div class="contact-item">工作年限：5年经验</div>
+            <div class="contact-item">工作年限：近<span id="workexperience"></span>年经验</div>
             <div>目前有两段工作经历(2024年11月份前)</div>
             <div class="contact-item">电话：17604884629</div>
             <div class="contact-item">邮箱：hanzhongiscoolboy@163.com</div>
@@ -412,6 +412,24 @@
 
             // 更新页面中的年龄
             document.getElementById("age").textContent = age;
+        
+        };
+
+        //工作年限
+            window.onload = function() {
+            const startDate = new Date("2019-01-01"); // 设定工作开始日期
+            const currentDate = new Date(); // 当前日期
+            let yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear(); // 计算年数
+
+            // 检查当前日期是否已过工作开始的日期，若未过，经验减一
+            const m = currentDate.getMonth();
+            const d = currentDate.getDate();
+            if (m < startDate.getMonth() || (m === startDate.getMonth() && d < startDate.getDate())) {
+                yearsOfExperience--;
+            }
+
+            // 更新页面中的工作经验
+            document.getElementById("workexperience").textContent = yearsOfExperience;
         };
     </script>
 </body>
