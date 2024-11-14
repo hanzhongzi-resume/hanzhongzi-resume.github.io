@@ -204,7 +204,7 @@
     <div class="section" id="personal-info">
         <h2>个人信息</h2>
         <div class="contact-info">
-            <div class="contact-item">年龄：26岁</div>
+            <div class="contact-item">年龄：<span id="age"></span>岁</div>
             <div class="contact-item">性别：男</div>
             <div class="contact-item">政治面貌：中共党员</div>
             <div class="contact-item">工作年限：5年经验</div>
@@ -397,6 +397,22 @@
                 timelineMarker.style.top = `${percentage}%`;
             });
         });
+        //年龄
+                window.onload = function() {
+            const birthDate = new Date("1998-05-14"); // 设定出生日期
+            const currentDate = new Date(); // 当前日期
+            let age = currentDate.getFullYear() - birthDate.getFullYear(); // 计算年龄
+
+            // 检查是否已过生日，若未过生日，年龄减一
+            const m = currentDate.getMonth();
+            const d = currentDate.getDate();
+            if (m < birthDate.getMonth() || (m === birthDate.getMonth() && d < birthDate.getDate())) {
+                age--;
+            }
+
+            // 更新页面中的年龄
+            document.getElementById("age").textContent = age;
+        };
     </script>
 </body>
 </html>
