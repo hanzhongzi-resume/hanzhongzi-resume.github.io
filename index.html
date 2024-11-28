@@ -12,17 +12,17 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: #6c757d            ;
         }
         h1, h2 {
-            color: #2c3e50;
+            color: #050505;
         }
         .section {
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 5px;
             transition: all 0.3s ease;
-            background-color: #ffffff;
+            background-color: #e1dedeba;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .section:hover {
@@ -82,7 +82,7 @@
             border: 1px dashed #ccc;
         }
         #personal-info {
-            background-color: #d4edda;
+            background-color: #70b6a2;
         }
         #skills {
             background-color: #cce5ff;
@@ -196,14 +196,133 @@
         padding: 10px;
     }
 }
+
+.page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #6c757d;
+        }
+
+        .page-header h1 {
+            color: #040404ba;
+            margin: 0;
+            font-size: 2em; /* 根据需要调整 */
+        }
+.header-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            background-color: #6c757d;
+        }
+        .header-container h1 {
+            color: #0b0a0aba;
+            margin: 0;
+        }
+
+        .resume-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .resume-menu a {
+            font-size: 0.9em;
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .resume-menu a:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .resume-menu a[href="#personal-info"] { background-color: #70b6a2; }
+        .resume-menu a[href="#skills"] { background-color: #cce5ff; }
+        .resume-menu a[href="#background-and-skills"] { background-color: #fff3cd; }
+        .resume-menu a[href="#work-experience-1"],
+        .resume-menu a[href="#work-experience-2"] { background-color: #e9ecef; }
+        .resume-menu a[href="#education"] { background-color: #ffeeba; }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-menu {
+                margin-top: 10px;
+            }
+        }
+
+        //回到顶部的按钮
+        #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #70b6a2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+/* 修改"回到顶部"按钮样式 */
+#back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #70b6a2;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 1000;
+    }
+
+    #back-to-top:hover {
+        background-color: #5a9a86;
+    }
     </style>
 </head>
+
 <body>
+   
+    <header class="page-header">
     <h1>章瀚中的简历</h1>
-    
+    <div class="header-container"></div>
+        <nav class="resume-menu">
+            <a href="#personal-info">个人信息</a>
+            <a href="#skills">技能特长</a>
+            <a href="#background-and-skills">从业背景</a>
+            <a href="#work-experience-1">工作经历二</a>
+            <a href="#work-experience-2">工作经历一</a>
+            <a href="#education">教育背景</a>
+        </nav>
+    </div>
+</header>
+</br>
+
     <div class="section" id="personal-info">
         <h2>个人信息</h2>
-        <div class="contact-info">
+        <div class="contact-info" >
             <div class="contact-item">年龄：<span id="age"></span>岁</div>
             <div class="contact-item">性别：男</div>
             <div class="contact-item">政治面貌：中共党员</div>
@@ -217,7 +336,7 @@
             <div class="contact-item">个人博客：<a href="https://hanzhongzi.github.io/" target="_blank">https://hanzhongzi.github.io/</a></div>
         </div>
     </div>
-
+</div>
     <div class="main-content">
         <div class="left-column">
             <div class="section" id="skills">
@@ -351,7 +470,7 @@
             </div>
         </div>
     </div>
-
+     <button id="back-to-top" aria-label="回到顶部">👆</button>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const sections = document.querySelectorAll('.section');
@@ -426,7 +545,76 @@
         // 更新页面中的工作经验
         document.getElementById("workexperience").textContent = yearsOfExperience;
     };
+
+    (function anonymous() {
+  // 禁用 debugger
+  window.debugger = function() {};
+
+  // 你的代码逻辑
+  debugger;  // 这将不会触发调试器
+})();
+
+(function () {
+  var devtoolsOpen = false;
+
+  // 检测开发者工具是否打开
+  var element = new Image();
+  Object.defineProperty(element, 'id', {
+    get: function () {
+      devtoolsOpen = true;
+      alert('检测到开发者工具打开，无法访问该页面！');
+      window.location.href = 'https://example.com'; // 重定向到其他页面
+    }
+  });
+
+  // 控制台输出触发检测
+  console.log(element);
+
+  // 通过定时器持续监测状态
+  setInterval(function () {
+    if (devtoolsOpen) {
+      console.warn('开发者工具仍然打开');
+    }
+  }, 1000);
+})();
+
+
+(function() {
+  // 禁用右键菜单
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+
+  // 禁止选中页面内容
+  document.body.style.userSelect = 'none';
+})();
+
+// 新增的平滑滚动功能
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+// 回到顶部按钮功能
+const backToTopButton = document.getElementById('back-to-top');
+
+// 滚动到顶部
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 点击按钮事件
+backToTopButton.addEventListener('click', scrollToTop);
     </script>
+    
 </body>
 </html>
 
